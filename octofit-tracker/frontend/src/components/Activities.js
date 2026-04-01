@@ -2,7 +2,10 @@ import EntityTableCard from './EntityTableCard';
 import { extractListFromApiResponse, getApiBaseUrl } from '../api';
 
 const API_BASE = getApiBaseUrl();
-const ENDPOINT = `${API_BASE}/api/activities/`;
+const CODESPACE_NAME = process.env.REACT_APP_CODESPACE_NAME;
+const ENDPOINT = CODESPACE_NAME
+  ? `https://${CODESPACE_NAME}-8000.app.github.dev/api/activities/`
+  : `${API_BASE}/api/activities/`;
 
 const COLUMNS = [
   { header: 'User', field: 'user' },
