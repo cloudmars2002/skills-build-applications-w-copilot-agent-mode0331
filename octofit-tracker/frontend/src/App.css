@@ -1,0 +1,144 @@
+:root {
+  --octo-bg: #eef2ff;
+  --octo-bg-soft: #dbeafe;
+  --octo-card: #ffffff;
+  --octo-text: #0b1f3a;
+  --octo-muted: #44546a;
+  --octo-accent: #0d9488;
+  --octo-accent-strong: #0b7285;
+  --octo-title: #1d4ed8;
+  --octo-link: #0369a1;
+  --octo-table-head: #1e293b;
+  --octo-table-row: #ecfeff;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 8% 8%, #cffafe 0%, rgba(207, 250, 254, 0) 38%),
+    radial-gradient(circle at 92% 18%, #ddd6fe 0%, rgba(221, 214, 254, 0) 34%),
+    linear-gradient(180deg, var(--octo-bg) 0%, var(--octo-bg-soft) 100%);
+  color: var(--octo-text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-hero {
+  background:
+    linear-gradient(115deg, #ffffff 0%, #eff6ff 55%, #ecfeff 100%);
+  border-radius: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.app-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 10px 22px rgba(2, 132, 199, 0.22);
+  flex-shrink: 0;
+}
+
+.app-hero h1 {
+  color: var(--octo-title);
+}
+
+.app-hero .lead {
+  color: var(--octo-muted) !important;
+}
+
+.app-nav .nav-link {
+  border-radius: 0.75rem;
+  color: var(--octo-muted);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.app-nav .nav-link:hover {
+  color: var(--octo-accent-strong);
+  background-color: #ffffff;
+  border-color: rgba(14, 165, 233, 0.5);
+}
+
+.app-nav .nav-link.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--octo-accent) 0%, var(--octo-accent-strong) 100%);
+  border-color: transparent;
+}
+
+a,
+.link-primary {
+  color: var(--octo-link) !important;
+}
+
+a:hover,
+.link-primary:hover {
+  color: #0f766e !important;
+}
+
+.octo-card {
+  border-radius: 1rem;
+  background-color: var(--octo-card);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.octo-card h2,
+.octo-card h3 {
+  color: var(--octo-title);
+}
+
+.octo-table thead th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--octo-table-head);
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.octo-table tbody tr:hover {
+  background-color: var(--octo-table-row);
+}
+
+.btn-primary {
+  background-color: var(--octo-accent);
+  border-color: var(--octo-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--octo-accent-strong);
+  border-color: var(--octo-accent-strong);
+}
+
+.btn-outline-primary {
+  color: var(--octo-accent-strong);
+  border-color: var(--octo-accent-strong);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--octo-accent-strong);
+  border-color: var(--octo-accent-strong);
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(1px);
+}
+
+@media (max-width: 768px) {
+  .app-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .app-nav .nav-link {
+    font-size: 0.9rem;
+  }
+}
